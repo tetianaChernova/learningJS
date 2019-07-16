@@ -5,7 +5,7 @@
  * If 'a' is negative, throw an Error with the message "Negative Error"
  */
 function isPositive(a) {
-    return (a > 0) ? "YES" : ((a== 0) ? "Zero Error" : "Negative Error");
+    return (a > 0) ? "YES" : ((a=== 0) ? "Zero Error" : "Negative Error");
 }
 
 

@@ -6,7 +6,7 @@ function getSecondLargest(nums) {
             second = first;
             first =nums[i];
         }
-        else if (nums[i] > second && nums[i] != first){
+        else if (nums[i] > second && nums[i] !== first){
             second = nums[i];
         }
     }

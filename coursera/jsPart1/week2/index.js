@@ -2,18 +2,15 @@
  * @param {String} tweet
  * @returns {String[]}
  */
-let result = [];
 module.exports = function (tweet) {
-    tweet.split(" ").filter(isHashtag).forEach(deletingHash);
+    let result = [];
+    tweet.split(' ').filter(v => v.startsWith('#')).forEach(list => {
+        result.push(list.slice(1));
+    });
     return result;
 };
 
-function isHashtag(word) {
-    return word.charAt(0) === "#";
-}
 
-function deletingHash(word, index) {
-    result.push(word.slice(1));
-}
+
 
 

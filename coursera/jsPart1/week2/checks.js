@@ -1,8 +1,8 @@
 // Встроенный в Node.JS модуль для проверок
-var assert = require('assert');
+let assert = require('assert');
 
 // Подключаем свою функцию
-var getHashTags = require('./index.js');
+let getHashTags = require('./index.js');
 
 assert.deepEqual(
     getHashTags('Прохожу курс на #coursera по #javascript'),
@@ -10,5 +10,7 @@ assert.deepEqual(
     'Строка "Прохожу курс на #coursera по #javascript"' +
     ' должна содержать хэштеги "coursera, javascript"'
 );
+
+// getHashTags('#tralik hello #tanya');
 
 console.info('OK!');

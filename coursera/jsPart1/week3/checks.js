@@ -1,11 +1,11 @@
 // Встроенный в Node.JS модуль для проверок
-let assert = require('assert');
+var assert = require('assert');
 
 // Подключаем свою функцию
-let date = require('./index.js');
+var date = require('./index.js');
 
 var time = date('2017-05-16 13:45')
-    .add(4, 'hours')
+    .add(24, 'hours')
     .subtract(1, 'months')
     .add(3, 'days')
     .add(15, 'minutes');
@@ -18,7 +18,8 @@ assert.deepEqual(
     'то получится "2017-04-20 14:00"'
 );
 
-
+// assert.throws принимает функцию и
+// проверяет, что она выбрасывает исключение определенного типа
 assert.throws(
     function () {
         date('2017-05-16 13:45').add(2, 'light-years');
@@ -39,4 +40,3 @@ assert.throws(
 );
 
 console.info('OK!');
-
